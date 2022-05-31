@@ -44,7 +44,7 @@ object DataMapper {
     fun mapSeriesResponseToDomain(input: ListSeriesResponse): List<Series> {
 
         var genre: String? = null
-        input.results?.forEach {
+        input.results?.iterator()?.forEach {
             if (it.genres != null && it.genres.count() > 0) {
                 genre = it.genres.first()?.name
             }
@@ -111,7 +111,7 @@ object DataMapper {
 
         var genre: String? = null
 
-        input.results?.forEach {
+        input.results?.iterator()?.forEach {
             if (it.genres != null && it.genres.count() > 0) {
                 genre = it.genres.first()?.name
             }
