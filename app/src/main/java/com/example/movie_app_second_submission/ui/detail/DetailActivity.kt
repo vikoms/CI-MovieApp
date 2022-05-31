@@ -34,7 +34,7 @@ class DetailActivity : AppCompatActivity() {
             type = intent.getStringExtra(EXTRA_TYPE).toString()
         }
 
-        if (type.equals(AppConstants.MOVIE))
+        if (type == AppConstants.MOVIE)
             supportActionBar?.title = "Detail Movie"
         else
             supportActionBar?.title = "Detail Series"
@@ -42,7 +42,7 @@ class DetailActivity : AppCompatActivity() {
 
         if (id != null || id != 0) {
             getFavoriteById(id!!)
-            if (type.equals(AppConstants.MOVIE)) {
+            if (type == AppConstants.MOVIE) {
                 viewModel.getMovie(id!!).observe(this) { movie ->
                     when (movie) {
                         is Resource.Loading -> {

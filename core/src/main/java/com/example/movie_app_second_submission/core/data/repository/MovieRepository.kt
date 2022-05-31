@@ -1,7 +1,6 @@
 package com.example.movie_app_second_submission.core.data.repository
 
 import android.annotation.SuppressLint
-import android.util.Log
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData

@@ -1,13 +1,11 @@
 package com.example.movie_app_second_submission.core.data.repository
 
 import android.annotation.SuppressLint
-import android.util.Log
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.rxjava2.flowable
 import com.example.movie_app_second_submission.core.data.Resource
-import com.example.movie_app_second_submission.core.data.local.datasource.FavoriteLocalDataSource
 import com.example.movie_app_second_submission.core.data.paging.SeriesPagingSource
 import com.example.movie_app_second_submission.core.data.remote.network.ApiService
 import com.example.movie_app_second_submission.core.domain.model.Series
@@ -25,7 +23,6 @@ import javax.inject.Singleton
 @Singleton
 class SeriesRepository @Inject constructor(
     private val apiService: ApiService,
-    private val favoriteLocalDataSource: FavoriteLocalDataSource,
     private val seriesPagingSource: SeriesPagingSource
 ) : ISeriesRepository {
     override fun getAllSeries(): Flowable<PagingData<Series>> {

@@ -11,7 +11,5 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 interface FavoriteModuleDependencies {
 
-    fun movieUseCase(): IMovieUseCase
-    fun seriesUseCase(): ISeriesUseCase
     fun favoriteUseCase(): IFavoriteUseCase
 }

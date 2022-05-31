@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.Series_app_first_submission.core.ui.SeriesAdapter
+import com.example.movie_app_second_submission.core.ui.SeriesAdapter
 import com.example.movie_app_second_submission.core.utils.AppConstants
 import com.example.movie_app_second_submission.databinding.FragmentSeriesBinding
 import com.example.movie_app_second_submission.ui.detail.DetailActivity
@@ -26,7 +26,7 @@ class SeriesFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentSeriesBinding.inflate(inflater, container, false)
         return binding.root

@@ -57,21 +57,21 @@ class MainActivity : AppCompatActivity() {
             .commit()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.menu, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: android.view.MenuItem): Boolean {
-        when (item.itemId) {
+        return when (item.itemId) {
             R.id.favorite -> {
                 val uri = Uri.parse("movieapp://favorite")
                 val intent = Intent(Intent.ACTION_VIEW, uri)
                 startActivity(intent)
-                return true
+                true
             }
-            else -> return true
+            else -> true
 
         }
     }

@@ -1,9 +1,15 @@
 <component name="libraryTable">
   <library name="Gradle: com.jakewharton.timber:timber:4.7.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c2550d2c2625ab2c83c9f61a892e2967/transformed/timber-4.7.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c2550d2c2625ab2c83c9f61a892e2967/transformed/timber-4.7.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c2550d2c2625ab2c83c9f61a892e2967/transformed/timber-4.7.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9757dca762618dee5efa3649bbfc135c/transformed/timber-4.7.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1a8344c7d61bb7fb033c1e7524274885/transformed/timber-4.7.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c59c292f0eca496e227df7c18f47e30e/transformed/timber-4.7.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/38c38c36e38363fd782627a3db506485/transformed/timber-4.7.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9e2df7abcefc43e718f1e25e46910cc4/transformed/timber-4.7.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d8c1a2bbd8cb1a2b5a522eb43bc4739b/transformed/timber-4.7.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d8c1a2bbd8cb1a2b5a522eb43bc4739b/transformed/timber-4.7.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d8c1a2bbd8cb1a2b5a522eb43bc4739b/transformed/timber-4.7.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jakewharton.timber/timber/4.7.1/746f28c804e92fe2b0dd553616c78b1c3693ba16/timber-4.7.1-javadoc.jar!/" />

@@ -14,7 +14,7 @@ object DataMapper {
 
     fun mapMovieResponseToDomain(input: MovieResponse): Movie {
 
-        var genre: String? = input.genres?.first()?.name
+        val genre: String? = input.genres?.first()?.name
 
         return Movie(
             id = input.id,

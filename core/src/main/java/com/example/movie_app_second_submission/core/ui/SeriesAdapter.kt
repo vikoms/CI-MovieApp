@@ -1,4 +1,4 @@
-package com.example.Series_app_first_submission.core.ui
+package com.example.movie_app_second_submission.core.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -29,7 +29,7 @@ class SeriesAdapter : PagingDataAdapter<Series, SeriesAdapter.SeriesViewHolder>(
 
 
     inner class SeriesViewHolder(private val binding: ItemListBinding): RecyclerView.ViewHolder(binding.root) {
-        var Series: Series? = null
+        var series: Series? = null
 
         fun bind(item: Series) {
             with(binding) {
@@ -39,11 +39,11 @@ class SeriesAdapter : PagingDataAdapter<Series, SeriesAdapter.SeriesViewHolder>(
                 tvTitle.text = item.name
                 tvDate.text = item.firstAirDate
             }
-            Series = item
+            series = item
         }
         init {
             binding.root.setOnClickListener {
-                onItemClick?.invoke(Series!!)
+                onItemClick?.invoke(series!!)
             }
         }
 

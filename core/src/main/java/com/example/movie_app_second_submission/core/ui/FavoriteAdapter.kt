@@ -12,8 +12,6 @@ import com.example.movie_app_second_submission.core.utils.AppConstants
 
 class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.ViewHolder>() {
     private var data = ArrayList<Favorite>()
-    private var dataMovie = ArrayList<Favorite>()
-    private var dataSeries = ArrayList<Favorite>()
     var onItemClick: ((Favorite) -> Unit)? = null
 
     fun setData(data: List<Favorite>) {
