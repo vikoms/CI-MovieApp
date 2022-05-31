@@ -1,1 +1,1 @@
-# CI-MovieApp
+# MovieApp-CI

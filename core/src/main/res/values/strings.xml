@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">core</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_imagedescription">ImageDescription</string>
+    <string name="text_img_btn_play">img_btn_play</string>
+    <string name="title_favorite">Module Title</string>
+    <string name="text_retry">Coba Lagi</string>
+</resources>

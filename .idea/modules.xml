@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Movie_App_Second_Submission.iml" filepath="$PROJECT_DIR$/.idea/modules/Movie_App_Second_Submission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Movie_App_Second_Submission.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Movie_App_Second_Submission.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Movie_App_Second_Submission.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Movie_App_Second_Submission.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/favorite/Movie_App_Second_Submission.favorite.iml" filepath="$PROJECT_DIR$/.idea/modules/favorite/Movie_App_Second_Submission.favorite.iml" />
+    </modules>
+  </component>
+</project>
