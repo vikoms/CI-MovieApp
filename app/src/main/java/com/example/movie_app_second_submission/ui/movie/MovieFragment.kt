@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.paging.LoadState
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.movie_app_second_submission.core.ui.LoadingStateAdapter
 import com.example.movie_app_second_submission.core.ui.MovieAdapter
@@ -46,8 +47,6 @@ class MovieFragment : Fragment() {
 
             showLoading()
             movieViewModel.getMoviePaging().observe(viewLifecycleOwner) { movies ->
-                binding.pgLoading.visibility = View.GONE
-                binding.rvMovies.visibility = View.VISIBLE
                 movieAdapter.submitData(lifecycle, movies)
             }
 
@@ -66,9 +65,20 @@ class MovieFragment : Fragment() {
     }
 
     private fun showLoading() {
-//        binding.pgLoading.visibility = View.VISIBLE
-//        binding.tvError.visibility = View.GONE
-//        binding.rvMovies.visibility = View.GONE
+
+        movieAdapter.addLoadStateListener { loadState ->
+            if(loadState.refresh is LoadState.Loading)  {
+                binding.pgLoading.visibility = View.VISIBLE
+                binding.tvError.visibility = View.GONE
+                binding.rvMovies.visibility = View.GONE
+            } else if(loadState.refresh is LoadState.NotLoading) {
+                binding.pgLoading.visibility = View.GONE
+                binding.tvError.visibility = View.GONE
+                binding.rvMovies.visibility = View.VISIBLE
+            }
+        }
+
+
         binding.rvMovies.adapter = movieAdapter.withLoadStateFooter(
             footer = LoadingStateAdapter {
                 movieAdapter.retry()

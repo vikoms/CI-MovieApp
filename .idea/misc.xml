@@ -5,6 +5,8 @@
       <map>
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.11302083333333333" />
+        <entry key="app/src/main/res/layout/fragment_movie.xml" value="0.11302083333333333" />
+        <entry key="app/src/main/res/layout/fragment_series.xml" value="0.11302083333333333" />
         <entry key="app/src/main/res/layout/item_placeholder.xml" value="0.11302083333333333" />
         <entry key="favorite/src/main/res/layout/activity_favorite.xml" value="0.11302083333333333" />
       </map>

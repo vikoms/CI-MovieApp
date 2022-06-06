@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.paging.LoadState
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.movie_app_second_submission.core.ui.SeriesAdapter
 import com.example.movie_app_second_submission.core.utils.AppConstants
@@ -18,7 +19,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class SeriesFragment : Fragment() {
 
     private val viewModel: SeriesViewModel by viewModels()
-
+    private lateinit var seriesAdapter: SeriesAdapter
     private var _binding: FragmentSeriesBinding? = null
     private val binding get() = _binding!!
 
@@ -35,7 +36,7 @@ class SeriesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if (activity != null) {
-            val seriesAdapter = SeriesAdapter()
+            seriesAdapter = SeriesAdapter()
             seriesAdapter.onItemClick = { selectedSeries ->
                 val intent = Intent(requireActivity(), DetailActivity::class.java)
                 intent.putExtra(DetailActivity.EXTRA_ID, selectedSeries.id)
@@ -45,8 +46,6 @@ class SeriesFragment : Fragment() {
 
             showLoading()
             viewModel.series.observe(viewLifecycleOwner) { series ->
-                binding.pgLoading.visibility = View.GONE
-                binding.rvSeries.visibility = View.VISIBLE
                 seriesAdapter.submitData(lifecycle,series)
             }
 
@@ -59,9 +58,18 @@ class SeriesFragment : Fragment() {
     }
 
     private fun showLoading() {
-        binding.pgLoading.visibility = View.VISIBLE
-        binding.tvError.visibility = View.GONE
-        binding.rvSeries.visibility = View.GONE
+
+        seriesAdapter.addLoadStateListener { loadState ->
+            if(loadState.refresh is LoadState.Loading) {
+                binding.pgLoading.visibility = View.VISIBLE
+                binding.tvError.visibility = View.GONE
+                binding.rvSeries.visibility = View.GONE
+            } else if(loadState.refresh is LoadState.NotLoading) {
+                binding.pgLoading.visibility = View.GONE
+                binding.tvError.visibility = View.GONE
+                binding.rvSeries.visibility = View.VISIBLE
+            }
+        }
     }
 
 

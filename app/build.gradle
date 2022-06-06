@@ -101,8 +101,8 @@ dependencies {
     kaptAndroidTest "androidx.hilt:hilt-compiler:$hilt_jetpack_version"
 
     // Paging
-    implementation "androidx.paging:paging-runtime:$paging_version"
-    implementation "androidx.paging:paging-rxjava2:$paging_version"
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
+    implementation "androidx.paging:paging-rxjava2-ktx:$paging_version"
 
     // Timber
     implementation "com.jakewharton.timber:timber:$timber_version"

@@ -1,12 +1,9 @@
 <resources>
     <string name="app_name">Movie App</string>
-    <string name="text_home">Home</string>
     <string name="text_movie">Movie</string>
     <string name="text_series">Series</string>
     <string name="text_favorite">Favorite</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_imagedescription">ImageDescription</string>
-    <string name="text_img_btn_play">img_btn_play</string>
-    <string name="title_favorite">Module Title</string>
+    <string name="text_img_star">img_star</string>
 </resources>
